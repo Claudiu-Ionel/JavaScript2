@@ -1,1 +1,51 @@
 /* add your styling here */
+body {
+  overflow-x: hidden;
+  background-color: rgb(108, 57, 2);
+  padding: 100px 0px;
+}
+.shelf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.book-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-left: 20px solid #a52a2a;
+  background-color: #a52a2ab3;
+  margin: 0px 20px 40px 0px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.book-item::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 10px;
+  background-color: wheat;
+  left: -150px;
+  bottom: -20px;
+  border-bottom: 2px solid gray;
+}
+
+.book-item_title,
+.book-item_author {
+  padding: 20px;
+}
+.book-item_title {
+  color: rgb(255, 234, 0);
+}
+.book-item_author,
+.book-item_language {
+  color: #fff;
+}
