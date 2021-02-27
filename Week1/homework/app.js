@@ -97,9 +97,9 @@
         bookTitle.setAttribute('class', 'book-item_title');
         bookAuthor.setAttribute('class', 'book-item_author');
         bookLanguage.setAttribute('class', 'book-item_language');
-        bookTitle.innerHTML = myBooks[el].title;
-        bookAuthor.innerHTML = `by ${myBooks[el].author}`;
-        bookLanguage.innerHTML = `in ${myBooks[el].language}`;
+        bookTitle.innerText = myBooks[el].title;
+        bookAuthor.innerText = `by ${myBooks[el].author}`;
+        bookLanguage.innerText = `in ${myBooks[el].language}`;
         book.appendChild(bookTitle);
         book.appendChild(bookAuthor);
         book.appendChild(bookLanguage);
@@ -116,6 +116,7 @@
   const arrayImageUrl = Object.values(bookImages);
   console.log(arrayImageUrl);
   console.log(arrayImageIds);
+
   function addBookImage() {
     for (let i = 0; i < getNrBooks; i++) {
       if (getBooks[i].id === arrayImageIds[i]) {
