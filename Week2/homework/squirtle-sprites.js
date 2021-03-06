@@ -9,3 +9,22 @@ function fetchPokemonData() {
 }
 
 /* Code goes below */
+let body = document.querySelector("body");
+let div = document.createElement("div");
+body.appendChild(div);
+console.log(body);
+let pokemon = JSON.parse(fetchPokemonData());
+let pokemonSprites = Object.values(pokemon.sprites).filter(item => {
+  if (item != "null") {
+    return item;
+  }
+});
+console.log(pokemonSprites);
+function appendSprites() {
+  pokemonSprites.forEach(element => {
+    let img = document.createElement("img");
+    img.setAttribute("src", element);
+    body.appendChild(img);
+  });
+};
+appendSprites();
