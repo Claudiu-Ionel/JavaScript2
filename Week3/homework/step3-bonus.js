@@ -4,7 +4,19 @@ const values = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c'];
 
 function makeUnique(arr) {
   // Replace this comment and the next line with your code
-  console.log(arr);
+  // const instances = arr.reduce((obj, item) => {
+  //   if (!obj[item]) {
+  //     obj[item] = item;
+  //   }
+  //   return obj;
+  // }, {});
+
+  // return Object.keys(instances);
+  // const unique = arr.filter((value, index, arr) => arr.indexOf(value) === index);
+  // return unique;
+
+  const unique = [...new Set(arr)];
+  return unique;
 }
 
 const uniqueValues = makeUnique(values);
